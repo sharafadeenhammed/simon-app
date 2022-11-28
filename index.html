@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./signin.css">
+    <style></style>
+    <link rel="shortcut icon" href="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in to your PayPal account</title>
+</head>
+<body>
+   
+    <div class="main-container">
+        <div class="logo"></div>
+        <form id="login-form" action="">
+            <div class="message">Please check your entries and try again</div>
+           <div class="email-cont" id="email-cont">
+                <label for="email" class="email-label" id="label">
+                    Email or mobile number
+                </label>
+                <input id="email" type="email number" class="email">
+
+           </div>
+           <div class="password-cont" id="pass-cont">
+                <label for="password" class="pass-label" id="pass-label">
+                    Enter your password
+                </label>
+                <input required id="password" type="password" class="password">
+           </div>
+           <div class="forgot">
+                <h3 class="forgot-password">Forgot password?</h3>
+           </div>
+           <div style="margin-bottom:30px">
+                <input required id="submit" value="Log In" class="submit-btn" type="submit">
+           </div>
+            
+        </form>
+        <div class="divider">
+            <div class="empty-div"></div>
+            <p>or</p>
+            <div class="empty-div"></div>
+
+        </div>
+        <button class="signup-btn">
+            Sign Up
+        </button>
+    </div>
+
+    <div class="progress" >
+        <div class="spinner"></div>
+    </div>
+
+    <footer>
+        <span>Contact Us</span>Privacy <span>Legal</span> <span>Policy  Updates</span> <span>Worldwide</span> 
+    </footer>
+    
+</body>
+<script src="./confirmsignin.js">
+</script>
+</html>

